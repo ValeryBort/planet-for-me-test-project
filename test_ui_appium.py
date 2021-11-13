@@ -23,6 +23,9 @@ def appium_driver(desired_caps):
 
 
 def test_wrong_login(desired_caps, appium_driver):
+    """
+    Негативный тест с некорректными данными для входа.
+    """
     driver = appium_driver
     log_in_button = driver.find_element(By.ID, 'com.planet.forme:id/logInTabButton')
     log_in_button.click()
@@ -40,6 +43,11 @@ def test_wrong_login(desired_caps, appium_driver):
 
 
 def test_login(desired_caps, appium_driver):
+    """
+    Позитивный тест с корректынми данными для входа.
+    Логин: gigas59600
+    Пароль: gigas59600
+    """
     driver = appium_driver
 
     log_in_button = driver.find_element(By.ID, 'com.planet.forme:id/logInTabButton')
@@ -76,7 +84,3 @@ def test_login(desired_caps, appium_driver):
     apply_button.click()
     results = driver.find_element(By.ID, 'com.planet.forme:id/recyclerGlobalSearch')
     assert results.is_displayed()
-
-    # test_email: gigas59600@hypteo.com
-    # test_login: gigas59600
-    # test_password: gigas59600
