@@ -9,6 +9,7 @@ python = "^3.7"
 selenium = "^4.0.0"
 requests = "^2.26.0"
 pytest = "^6.2.5"
+Appium-Python-Client = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 
